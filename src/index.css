@@ -1,3 +1,23 @@
+.square {
+  background: wheat;
+  border: 2px solid black;
+  margin-left: 2px;
+  /*margin-right: px; */
+  margin-top: 40px;
+  padding: 0;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.square:focus{
+  outline: none;
+}
+
+/*
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +31,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+*/
