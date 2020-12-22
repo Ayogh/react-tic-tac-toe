@@ -1,9 +1,10 @@
 .square {
   background: wheat;
-  border: 2px solid black;
-  margin-left: 2px;
-  /*margin-right: px; */
-  margin-top: 40px;
+  border: 2.5px solid black;
+  margin-left: -1px;
+  margin-right: -1px; 
+  margin-top: -2.5px;
+  margin-bottom: -2.5px;
   padding: 0;
   width: 4rem;
   height: 4rem;
@@ -15,6 +16,17 @@
 
 .square:focus{
   outline: none;
+}
+
+.status {
+  margin-bottom: 10px;
+
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 /*
