@@ -1,22 +1,14 @@
 import React from 'react';
 
-// Fill Square with X when clicked, i.e.,
-// g
+// handleClick and squares[i] are passed as props from Board to Square.
 class Square extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null,
-    };
-  }
-
   render() {
     return (
       <button
         className="square"
-        onClick={() => this.setState({value: 'X'})}
+        onClick={() => this.props.onClick()}
       >
-        {this.state.value}
+        {this.props.value}
       </button>
     );
   }

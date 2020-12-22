@@ -1,9 +1,10 @@
 .square {
   background: wheat;
   border: 2.5px solid black;
-  margin-right: -1.5px;
-  /*margin-right: px; */
-  margin-top: -1.5px;
+  margin-left: -1px;
+  margin-right: -1px; 
+  margin-top: -2.5px;
+  margin-bottom: -2.5px;
   padding: 0;
   width: 4rem;
   height: 4rem;
@@ -27,6 +28,7 @@
   content: "";
   display: table;
 }
+
 /*
 body {
   margin: 0;
