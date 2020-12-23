@@ -1,5 +1,6 @@
 ## Give player the ability to mark O inside the squares
 
+
 1) Go to the Board component.
 
 2) Add a boolean property to the state object called xIsNext and set it to true(xIsNext: true)
