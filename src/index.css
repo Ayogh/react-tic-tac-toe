@@ -1,12 +1,14 @@
 .square {
   background: wheat;
-  border: 2px solid black;
-  margin-left: 2px;
-  /*margin-right: px; */
-  margin-top: 40px;
+  border: 1px solid black;
+  float: left;
+  margin-right: -1px;
+  margin-left: -1px;
+  /*margin-top: -2px;*/
+  /*margin-bottom: -2px;*/
   padding: 0;
-  width: 4rem;
-  height: 4rem;
+  width: 80px;/*4rem;*/
+  height: 80px;/*4rem;*/
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -15,6 +17,17 @@
 
 .square:focus{
   outline: none;
+}
+
+.status {
+  margin-bottom: 10px;
+
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 /*
