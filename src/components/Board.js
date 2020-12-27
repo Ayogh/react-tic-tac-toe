@@ -3,15 +3,15 @@ import React from 'react';
 import Square from './Square';
 
 class Board extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      squares: Array(9).fill(null),
-      xIsNext: true,
-    };
-  }
+   constructor(props) {
+     super(props);
+     this.state = {
+       squares: Array(9).fill(null),
+       xIsNext: true,
+     };
+   }
  
-  handleClick(i) {
+   handleClick(i) {
     //make copy of squares
     const squares = this.state.squares.slice(); 
     //if (calculateWinner(squares) is "true" then do not evalute squares[i] but enter if-statement and execute the return statement, i.e., if calculateWinner(squares) returns "squares[a]" then it is "true", but if it returns "null" then it is "false". If calculateWinner(squares) is "false" then go to squares[i] and evaluate it; if squares[i] evaluates to X or O then it is "true" so enter the if-statement and execute its return statement, but if squares[i] is "null" then it is "false" therefore skip the if-statement and go to squares[i] = this.state.xIsNext ? 'X' : 'O';
@@ -23,8 +23,9 @@ class Board extends React.Component {
       squares: squares,
       xIsNext: !this.state.xIsNext,
     });
-  }
-
+   }
+ 
+    
   renderSquare(i) {
     return (
       <Square
@@ -92,5 +93,4 @@ function calculateWinner(squares) {
   return null;
 
 }
-
 
