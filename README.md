@@ -1,17 +1,8 @@
-## Give player the ability to mark O inside the squares
 
 
-1) Go to the Board component.
+## Create Game component
 
-2) Add a boolean property to the state object called xIsNext and set it to true(xIsNext: true)
+1) Create a Game component that returns an empty div container.
 
-3) To achieve the ability to be able to either mark X or O inside the squares, make the following additions in the handleClick method:
+2) Let handleClick function to return early by ignoring a click if someone has won the game or if a Square is already filled(let Board do nothing if someone has won or if square is already filled).
 
-   handleClick(i) {
-     const squares = this.state.squares.slice();
-     squares[i] = this.state.xIsNext ? 'X' : 'O';
-     this.setState({
-       squares: squares,
-       xIsNext: !this.state.xIsNext,
-     });
-   }

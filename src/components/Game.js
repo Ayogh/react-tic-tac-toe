@@ -12,6 +12,7 @@ class Game extends React.Component {
          xIsNext: true,
        };
    }
+  
    render() {
       return (
          <div className="game">
@@ -19,7 +20,7 @@ class Game extends React.Component {
                <Board />
             </div>
         </div>
-     );
+      );
    }
 }
 
