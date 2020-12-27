@@ -15,3 +15,7 @@
        xIsNext: !this.state.xIsNext,
      });
    }
+
+## Create Game component
+
+1) Create a Game component that returns an empty div container.
