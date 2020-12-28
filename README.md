@@ -1,3 +1,11 @@
-# Show past moves of the game
+# Implementing time travel
 
-1) This is accomplished by mapping over the history in the Game's render method to React elements representing buttons on the screen and display a list of buttons to jump to past moves.
+We are to add a stepNumber to the Game component's state to indicate which step is currently
+being viewed as shown below:
+
+1) First, add a stepNumber: 0 to the initial state in Game's constructor.
+
+2) Next, define the "jumpTo" method in Game to update that stepNumber. 
+
+3) Also in the state, set xIsNext to true if stepNumber changes to an even number
+

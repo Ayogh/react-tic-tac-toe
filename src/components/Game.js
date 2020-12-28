@@ -9,14 +9,16 @@ class Game extends React.Component {
          history: [{
            squares: Array(9).fill(null)
          }],
+         stepNumber: 0,
          xIsNext: true
        };
    }
 
    handleClick(i) {
-      const history = this.state.history;
+      //The slice function makes a copy of the history object.
+      const history = this.state.history.slice(0, this.state.stepNumber + 1);
       const current = history[history.length - 1];
-      const squares = current.squares.slice();
+      const squares = current.squares.slice(); // make copy of squares array
       if (calculateWinner(squares) || squares[i]) {
         return;
       }
@@ -25,12 +27,16 @@ class Game extends React.Component {
         history: history.concat([{
           squares: squares
         }]),
+        stepNumber: history.length,
         xIsNext: !this.state.xIsNext,
       });
    }
 
-   jumpTo(step) {
-      //
+   jumpTo(stepNum) {
+      this.setState({
+         stepNumber: stepNum,
+         xIsNext: (stepNum % 2) === 0
+       });
    }
   
    render() {
@@ -41,7 +47,7 @@ class Game extends React.Component {
       //Therefore, current = history[history.length - 1] = history[2]
       //(history.length - 1) = last element in the array "squares"
       const history = this.state.history;
-      const current = history[history.length - 1];
+      const current = history[this.state.stepNumber];
       const winner = calculateWinner(current.squares);
 
       const moves = history.map((step, move) => {
