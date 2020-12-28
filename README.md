@@ -1,3 +1,4 @@
+
 ## Update the Game component's render function to use the most recent history entry to determine and display the game's status
 
 1) In the render function:
@@ -12,5 +13,4 @@ c) Pass the array from b) into the calculateWinner function to determine the win
 d) If there is a winner, declare the winner else mark the next letter.
 
 e) Return the Board component along with the square array and handleClick function as props in the Board component.
-
 
