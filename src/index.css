@@ -41,7 +41,7 @@
   margin: 0 auto;
 }
 /* Game Information */
-ul {
+ol, ul {
   padding-left: 30px;
 }
 .game-info {
