@@ -1,17 +1,3 @@
-## Give player the ability to mark O inside the squares
+# Show past moves of the game
 
-
-1) Go to the Board component.
-
-2) Add a boolean property to the state object called xIsNext and set it to true(xIsNext: true)
-
-3) To achieve the ability to be able to either mark X or O inside the squares, make the following additions in the handleClick method:
-
-   handleClick(i) {
-     const squares = this.state.squares.slice();
-     squares[i] = this.state.xIsNext ? 'X' : 'O';
-     this.setState({
-       squares: squares,
-       xIsNext: !this.state.xIsNext,
-     });
-   }
+1) This is accomplished by mapping over the history in the Game's render method to React elements representing buttons on the screen and display a list of buttons to jump to past moves.
